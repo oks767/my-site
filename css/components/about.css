@@ -43,4 +43,32 @@
     font-size: 30px;
   }
 }
+
+.swiper-button-next {
+  position: absolute;
+  left: 70%;
+  bottom: 10%;
+}
+
+.arrow-right {
+  width: 24px;
+  height: 24px;
+}
+@media (min-width: 992px) {
+  .arrow-right {
+    width: 50px;
+    height: 50px;
+  }
+}
+
+.swiper-pagination {
+  position: absolute;
+  left: -10%;
+  bottom: 10%;
+}
+
+.swiper-pagination-bullet {
+  width: 20px;
+  height: 20px;
+}
 /*# sourceMappingURL=about.css.map */
