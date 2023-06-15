@@ -75,7 +75,7 @@
 
 @media (min-width: 992px) {
   .language {
-    margin-top: 30px;
+    padding-top: 30px;
   }
 }
 
@@ -204,9 +204,5 @@
   .arrow-contacts {
     display: none;
   }
-}
-
-.swiper-slide {
-  min-width: 0 !important;
 }
 /*# sourceMappingURL=home.css.map */
