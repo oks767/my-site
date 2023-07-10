@@ -5,9 +5,14 @@
 /*!*******************************!*\
   !*** ./src/js/_components.js ***!
   \*******************************/
-/***/ (() => {
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-console.log('components');
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _components_tabs__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./components/tabs */ "./src/js/components/tabs.js");
+console.log("components");
+
+(0,_components_tabs__WEBPACK_IMPORTED_MODULE_0__.tabsMySite)();
 
 /***/ }),
 
@@ -31,6 +36,7 @@ console.log((0,_functions_mobile_check__WEBPACK_IMPORTED_MODULE_0__.mobileCheck)
 
 (0,_functions_dropdown_js__WEBPACK_IMPORTED_MODULE_1__.myLanguage)();
 (0,_functions_dropdown_js__WEBPACK_IMPORTED_MODULE_1__.myContacts)();
+(0,_functions_dropdown_js__WEBPACK_IMPORTED_MODULE_1__.myTabs)();
 // Определение ширины экрана
 // import { isMobile, isTablet, isDesktop } from './functions/check-viewport';
 // if (isDesktop()) {
@@ -158,6 +164,80 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./src/js/components/tabs.js":
+/*!***********************************!*\
+  !*** ./src/js/components/tabs.js ***!
+  \***********************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   tabsMySite: () => (/* binding */ tabsMySite)
+/* harmony export */ });
+function tabsMySite() {
+  document.addEventListener("DOMContentLoaded", () => {
+    const tabs = document.querySelector(".tabs");
+    const tabsBtn = document.querySelectorAll(".tabs__btn");
+    const tabsContent = document.querySelectorAll(".tabs__content");
+    if (tabs) {
+      tabs.addEventListener("click", e => {
+        if (e.target.classList.contains("tabs__btn")) {
+          const tabsPath = e.target.dataset.tabsPath;
+          tabsBtn.forEach(el => {
+            el.classList.remove("tabs__btn--active");
+          });
+          document.querySelector(`[data-tabs-path="${tabsPath}"]`).classList.add("tabs__btn--active");
+          tabsHandler(tabsPath);
+        }
+
+        // if (e.target.classList.contains("tabs__arrow--prev")) {
+        //   let activeBtn = document.querySelector(".tabs__btn--active");
+        //   let activeParent = activeBtn.closest(".tabs__item");
+        //   let previousParent = activeParent.previousElementSibling;
+
+        //   if (previousParent) {
+        //     let prevActive = previousParent.querySelector(".tabs__btn");
+        //     tabsBtn.forEach((el) => {
+        //       el.classList.remove("tabs__btn--active");
+        //     });
+        //     prevActive.classList.add("tabs__btn--active");
+
+        //     let path = prevActive.dataset.tabsPath;
+        //     tabsHandler(path);
+        //   }
+        // }
+
+        // if (e.target.classList.contains("tabs__arrow--next")) {
+        //   let activeBtn = document.querySelector(".tabs__btn--active");
+        //   let activeParent = activeBtn.closest(".tabs__item");
+        //   let nextParent = activeParent.nextElementSibling;
+
+        //   if (nextParent) {
+        //     let nextActive = nextParent.querySelector(".tabs__btn");
+        //     tabsBtn.forEach((el) => {
+        //       el.classList.remove("tabs__btn--active");
+        //     });
+        //     nextActive.classList.add("tabs__btn--active");
+
+        //     let path = nextActive.dataset.tabsPath;
+        //     tabsHandler(path);
+        //   }
+        // }
+      });
+    }
+
+    const tabsHandler = path => {
+      tabsContent.forEach(el => {
+        el.classList.remove("tabs__content--active");
+      });
+      document.querySelector(`[data-tabs-target="${path}"]`).classList.add("tabs__content--active");
+    };
+  });
+}
+
+/***/ }),
+
 /***/ "./src/js/functions/dropdown.js":
 /*!**************************************!*\
   !*** ./src/js/functions/dropdown.js ***!
@@ -168,7 +248,8 @@ __webpack_require__.r(__webpack_exports__);
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   myContacts: () => (/* binding */ myContacts),
-/* harmony export */   myLanguage: () => (/* binding */ myLanguage)
+/* harmony export */   myLanguage: () => (/* binding */ myLanguage),
+/* harmony export */   myTabs: () => (/* binding */ myTabs)
 /* harmony export */ });
 function myLanguage() {
   document.querySelector(".lg").addEventListener("click", function () {
@@ -194,7 +275,11 @@ function myContacts() {
     document.getElementById("myContacts").classList.toggle("show");
   });
 }
-
+function myTabs() {
+  document.querySelector(".drop-btn").addEventListener("click", function () {
+    document.getElementById("dropdownTabsBtn").classList.toggle("show");
+  });
+}
 // Закройте выпадающее меню, если пользователь щелкает за его пределами
 window.onclick = function (event) {
   if (!event.target.matches(".dropbtnContacts")) {
@@ -13199,7 +13284,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _vars__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./_vars */ "./src/js/_vars.js");
 /* harmony import */ var _functions__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./_functions */ "./src/js/_functions.js");
 /* harmony import */ var _components__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./_components */ "./src/js/_components.js");
-/* harmony import */ var _components__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_components__WEBPACK_IMPORTED_MODULE_3__);
 
 
 

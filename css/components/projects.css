@@ -1,0 +1,113 @@
+.projects {
+  height: 100vh;
+  background-color: #1e1e1e;
+}
+.projects__title {
+  text-transform: uppercase;
+  text-align: center;
+  position: relative;
+  color: #fff;
+  font-family: "Inter";
+  padding-top: 100px;
+  margin: 0;
+}
+@media (min-width: 992px) {
+  .projects__title {
+    text-align: left;
+    font-size: 40px;
+  }
+}
+.projects__title::after {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: -o-linear-gradient(317.23deg, #e0d2ff 7.48%, #efc4fe 27%, #e9fffb 58.5%, #b7b2f2 92.67%);
+  background: linear-gradient(132.77deg, #e0d2ff 7.48%, #efc4fe 27%, #e9fffb 58.5%, #b7b2f2 92.67%);
+}
+@media (min-width: 992px) {
+  .projects__title::after {
+    bottom: 10px;
+    left: 250px;
+  }
+}
+.projects__list {
+  list-style-type: none;
+  border: 1px solid #fff;
+  border-radius: 35px;
+  margin-top: 20px;
+  padding: 5px 15px;
+  width: 150px;
+}
+.projects__images {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -ms-flex-pack: distribute;
+  justify-content: space-around;
+}
+
+.dropdown-content-tabs {
+  display: none;
+  -webkit-transition: 0.3s ease;
+  -o-transition: 0.3s ease;
+  transition: 0.3s ease;
+}
+
+.show {
+  display: block;
+  z-index: 0;
+}
+
+.tabs__btn {
+  color: #fff;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-family: "Inter";
+  display: inline;
+  border: 1px solid transparent;
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+  background-color: transparent;
+  outline: none;
+  cursor: pointer;
+}
+
+.tabs__btn:hover {
+  border-bottom: 1px solid #fff;
+}
+
+.img-tabs {
+  height: 250px;
+  margin-top: 20px;
+}
+
+.img-tabs img {
+  height: 100%;
+}
+
+.three {
+  display: none;
+}
+@media (min-width: 568px) {
+  .three {
+    display: block;
+  }
+}
+
+.tabs__content {
+  display: none;
+}
+
+.tabs__content--active {
+  display: unset;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+/*# sourceMappingURL=projects.css.map */
