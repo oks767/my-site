@@ -33,4 +33,89 @@
     left: 250px;
   }
 }
+
+.card {
+  width: 200px;
+  color: #000;
+  font-family: Inter;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  border-radius: 35px;
+  background: #fff;
+  -webkit-box-shadow: 7px 9px 35px 11px rgba(224, 210, 255, 0.25) inset, -2px 5px 35px 5px rgba(0, 0, 0, 0.5);
+  box-shadow: 7px 9px 35px 11px rgba(224, 210, 255, 0.25) inset, -2px 5px 35px 5px rgba(0, 0, 0, 0.5);
+  padding: 10px 32px 50px 32px;
+}
+
+.reviews__text {
+  text-align: center;
+}
+
+.swiper-slide-reviews {
+  width: 200px;
+  height: 100%;
+  position: relative;
+  -webkit-transition-property: -webkit-transform;
+  transition-property: -webkit-transform;
+  -o-transition-property: transform;
+  transition-property: transform;
+  transition-property: transform, -webkit-transform;
+  margin-top: 70px;
+  margin-left: 20px;
+}
+
+.swiper-slide-invisible-blank {
+  visibility: hidden;
+}
+
+.swiper-autoheight,
+.swiper-autoheight .swiper-slide-reviews {
+  height: auto;
+}
+.swiper-autoheight .swiper-wrapper {
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+  -webkit-transition-property: height, -webkit-transform;
+  transition-property: height, -webkit-transform;
+  -o-transition-property: transform, height;
+  transition-property: transform, height;
+  transition-property: transform, height, -webkit-transform;
+}
+
+.button-next,
+.button-prev {
+  z-index: 1000;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  position: absolute;
+  width: 20px;
+  bottom: 60%;
+}
+
+.button-next {
+  left: 50%;
+}
+
+.button-prev {
+  -webkit-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  transform: rotate(180deg);
+  right: 50%;
+  margin-right: 10px;
+}
+
+.swiper-reviews {
+  height: 100vh;
+}
 /*# sourceMappingURL=reviewes.css.map */

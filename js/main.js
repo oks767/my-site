@@ -84,21 +84,52 @@ console.log((0,_functions_mobile_check__WEBPACK_IMPORTED_MODULE_0__.mobileCheck)
 // Подключение свайпера
 
 swiper__WEBPACK_IMPORTED_MODULE_2__["default"].use([swiper__WEBPACK_IMPORTED_MODULE_2__.Navigation, swiper__WEBPACK_IMPORTED_MODULE_2__.Pagination, swiper__WEBPACK_IMPORTED_MODULE_2__.Autoplay]);
-const swiper = new swiper__WEBPACK_IMPORTED_MODULE_2__["default"](".swiper", {
-  slidesPerView: "auto",
-  // autoplay: {
-  //   delay: 2500,
-  // },
-  navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev"
-  },
+const swiper = new swiper__WEBPACK_IMPORTED_MODULE_2__["default"](".mySwiper", {
+  slidesPerView: 1,
   pagination: {
     el: ".swiper-pagination",
     clickable: true
   }
 });
-
+swiper__WEBPACK_IMPORTED_MODULE_2__["default"].use([swiper__WEBPACK_IMPORTED_MODULE_2__.Navigation, swiper__WEBPACK_IMPORTED_MODULE_2__.Pagination, swiper__WEBPACK_IMPORTED_MODULE_2__.Autoplay]);
+const swiperReviews = new swiper__WEBPACK_IMPORTED_MODULE_2__["default"](".swiper-reviews", {
+  slideClass: "swiper-slide-reviews",
+  slidesPerView: 3,
+  effect: "cards",
+  autoplay: {
+    delay: 2500
+  },
+  navigation: {
+    nextEl: ".button-next",
+    prevEl: ".button-prev"
+  },
+  nested: true,
+  breakpoints: {
+    // when window width is >= 320px
+    320: {
+      slidesPerView: 1,
+      spaceBetween: 50
+    },
+    // when window width is >= 480px
+    480: {
+      slidesPerView: 1,
+      spaceBetween: 30
+    },
+    // when window width is >= 640px
+    640: {
+      slidesPerView: 2,
+      spaceBetween: 50
+    },
+    1200: {
+      slidesPerView: 3,
+      spaceBetween: 40
+    }
+  }
+  // pagination: {
+  //   el: ".swiper-pagination",
+  //   clickable: true,
+  // },
+});
 // Подключение анимаций по скроллу
 // import AOS from 'aos';
 // AOS.init();
